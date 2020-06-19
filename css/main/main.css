@@ -13,7 +13,7 @@ body {
 .container .header {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
 }
 
 .container .header .welcome {
@@ -24,7 +24,7 @@ body {
 }
 
 .container .header .welcome h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .container .header .welcome h1 #print {
@@ -40,7 +40,30 @@ body {
   font-weight: 300;
 }
 
+.container .header .welcome .banner {
+  margin: 2rem auto;
+  margin-top: 8rem;
+  width: 45%;
+  padding: 1rem 0;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(121deg, #1705ca 9%, #152d76 63%);
+  color: #ffffff;
+}
+
+.container .header .welcome .banner h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.52;
+  letter-spacing: normal;
+  text-align: center;
+}
+
 .container .about {
+  margin: 5rem auto !important;
   width: 90%;
   margin: 0 auto;
   display: -webkit-box;
@@ -90,6 +113,24 @@ body {
   color: #7d7d7d;
 }
 
+.container .about .text button {
+  margin-top: 1rem;
+  border: none;
+  width: 8rem;
+  border-radius: 0.8em;
+  background-color: #1710b4;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  cursor: pointer;
+  outline: none;
+}
+
 .container .about .image img {
   width: 25rem;
 }
@@ -116,6 +157,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #ffffff;
+}
+
+.container .reach .text {
+  width: 70%;
 }
 
 .container .reach .text h1 {
@@ -172,9 +217,100 @@ body {
   color: #474747;
 }
 
+.container .events .eventsCards {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.container .events .eventsCards .event {
+  margin: 1rem 0;
+  width: 25%;
+  min-width: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 1rem;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  cursor: pointer;
+}
+
+.container .events .eventsCards .event:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.container .events .eventsCards .event img {
+  width: 100%;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.container .events .eventsCards .event .caption {
+  width: 100%;
+  margin: 0.5rem 1rem;
+}
+
+.container .events .eventsCards .event .caption h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.51;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.container .events .eventsCards .event .caption h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666666;
+}
+
 @media (max-width: 810px) {
   .container .header .welcome h1 {
     font-size: 2rem;
+  }
+  .container .header .welcome .banner {
+    width: 80%;
+  }
+  .container .header .welcome .banner h1 {
+    font-size: 1.2rem;
   }
   .container .about {
     -webkit-box-orient: vertical;
@@ -194,8 +330,11 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .container .reach .text {
+    width: auto;
+  }
   .container .reach .text h1 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
   .container .reach .button button {
