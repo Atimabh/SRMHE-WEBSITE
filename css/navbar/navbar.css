@@ -16,6 +16,7 @@
 
 .nav .logoImg {
     margin: auto 2rem;
+    margin-right: 0.5rem !important;
     width: 3rem;
     display: inline-block;
     vertical-align: middle;
@@ -152,6 +153,10 @@
     .nav .menu-icon {
         display: none;
     }
+    .nav .logoTextWrapper .logoText {
+        font-size: 1rem;
+        margin-top: 1.8rem !important;
+    }
 }
 
 @media (max-width: 400px) {
@@ -160,5 +165,6 @@
     }
     .nav .logoTextWrapper .logoText {
         font-size: 1rem;
+        margin-top: 1.8rem !important;
     }
 }

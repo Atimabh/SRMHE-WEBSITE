@@ -23,8 +23,16 @@ body {
   text-align: center;
 }
 
+.container .header .welcome #wlcm {
+  background-color: #ffffff;
+}
+
 .container .header .welcome h1 {
   font-size: 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .container .header .welcome h1 #print {
@@ -255,12 +263,6 @@ body {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-  cursor: pointer;
-}
-
-.container .events .eventsCards .event:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .container .events .eventsCards .event img {
@@ -272,6 +274,31 @@ body {
 .container .events .eventsCards .event .caption {
   width: 100%;
   margin: 0.5rem 1rem;
+  position: relative;
+}
+
+.container .events .eventsCards .event .caption .expand {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #152d76;
 }
 
 .container .events .eventsCards .event .caption h1 {
@@ -300,6 +327,12 @@ body {
   letter-spacing: normal;
   text-align: center;
   color: #666666;
+}
+
+@media (max-width: 1000px) {
+  .container .events .eventsCards .event {
+    min-width: 200px;
+  }
 }
 
 @media (max-width: 810px) {
@@ -339,6 +372,21 @@ body {
   }
   .container .reach .button button {
     font-size: 1rem;
+  }
+  .container .events .eventsCards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .events .eventsCards .event {
+    min-width: 290px;
+  }
+  .container .events p {
+    font-size: 1.2rem;
   }
 }
 
